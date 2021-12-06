@@ -1,2 +1,2 @@
-# cargar_datos
-Aplicación de escritorio para cargar datos Excel
+# Cargar datos
+Aplicación de escritorio con tkinter para cargar datos Excel.
