@@ -460,7 +460,7 @@ class Ventana():
         pantalla_alto = self.root.winfo_screenheight()
 
         # Centrar        
-        x = (pantalla_ancho/2 - ventana_ancho/2) * 0.8
+        x = (pantalla_ancho/2 - ventana_ancho/2)
         y = (pantalla_alto/2 - ventana_alto/2) * 0.8
 
         self.root.geometry(f'{ventana_ancho}x{ventana_alto}+{int(x)}+{int(y)}')
@@ -505,7 +505,7 @@ class Ventana():
     
     # Dataframe    
     def guardar_archivo(self):
-        archivo_guardado = filedialog.asksaveasfilename(initialdir='./', title='Guardar archivo', initialfile='tablapp.xlsx', defaultextension='*.xlsx', filetypes=[('Excel', '*.xlsx *.xls'), ('CSV', '*.csv')])
+        archivo_guardado = filedialog.asksaveasfilename(initialdir='./', title='Guardar archivo', initialfile='tabla.xlsx', defaultextension='*.xlsx', filetypes=[('Excel', '*.xlsx *.xls'), ('CSV', '*.csv')])
         
         try:
             if archivo_guardado.endswith('.xlsx') or archivo_guardado.endswith('.xls'):
@@ -516,7 +516,7 @@ class Ventana():
             pass        
         
     def abrir_archivo(self):
-        ruta = filedialog.askopenfilename(initialdir='./', title='Seleccionar archivo', filetypes=[('Excel files', '*.xlsx *.xls'), ('CSV files', '*.csv'), ("all files","*.*")])
+        ruta = filedialog.askopenfilename(initialdir='./', title='Seleccionar archivo', filetypes=[("all files","*.*"), ('Excel files', '*.xlsx *.xls'), ('CSV files', '*.csv')])
         
         if not ruta:
             return
@@ -580,7 +580,6 @@ try:
     ventana.tabla = pd.read_excel('./tabla.xlsx')
 except:
     ventana.tabla = pd.DataFrame()
-
 
 
 ventana.root.mainloop()
