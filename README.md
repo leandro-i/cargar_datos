@@ -6,6 +6,9 @@ Aplicación de escritorio con tkinter para cargar datos Excel y CSV.
 ## Clonar
 `git clone https://github.com/leandro-i/cargar_datos`
 
+## Archivo ejecutable
+[Download](https://github.com/leandro-i/files/raw/master/cargar_datos/cargar_datos_v1.exe)
+
 ## Módulos utilizados
 - tkinter
 - os
